@@ -22,7 +22,7 @@ In this step, we'll install the required dependencies to use passport and the `a
 
 ### Solution
 
-<b> insert giphy here </b>
+<img src="https://github.com/DevMountain/node-auth-mini/blob/solution/readme-assets/1g.gif" />
 
 ## Step 2
 
@@ -341,7 +341,7 @@ In this step, we'll open a browser and see if we can log in to our Auth0 client.
 
 ### Solution
 
-<b> insert giphy here </b>
+<img src="https://github.com/DevMountain/node-auth-mini/blob/solution/readme-assets/2g.gif" />
 
 
 
