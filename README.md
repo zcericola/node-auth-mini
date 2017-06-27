@@ -32,7 +32,7 @@ In this step, we'll go to `manage.auth0.com` to create an account and modify the
 
 ### Instructions
 
-* Go to <a href="manage.auth0.com">Manage Auth0</a>.
+* Go to `manage.auth0.com`.
 * Register for an account.
   * Set the account type to `Personal`.
   * Set the role to `Developer`.
