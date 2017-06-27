@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project, we'll use `passport` to handle authenticating users. Passport can use many different `strategies` to authenticate users. However, we'll take a look at just one of them for this project. We are going to use the `auth0` strategy. We'll have to sign-up at `manage.auth0.com` to get an app (aka client) that we can login to. 
+In this project, we'll use `passport` to handle authenticating users. Passport can use many different `strategies` to authenticate users. However, we'll take a look at just one of them for this project. We are going to use the `auth0` strategy. We'll have to sign-up at `manage.auth0.com` to get an app (aka client) that we can log in to. 
 
 ## Setup
 
@@ -22,7 +22,7 @@ In this step, we'll install the required dependencies to use passport and the `a
 
 ### Solution
 
-<b> insert giphy here </b>
+<img src="https://github.com/DevMountain/node-auth-mini/blob/solution/readme-assets/1g.gif" />
 
 ## Step 2
 
@@ -37,7 +37,7 @@ In this step, we'll go to `manage.auth0.com` to create an account and modify the
   * Set the account type to `Personal`.
   * Set the role to `Developer`.
   * Set the project to `Just playing around`.
-* Login to your Auth0 account.
+* Log in to your Auth0 account.
 * Go to `Clients` using the left navigation bar.
 * Click on `Settings` for the default app.
   * Change the `Client Type` to `Non Interactive Client`.
@@ -332,7 +332,7 @@ app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
 
 ### Summary
 
-In this step, we'll open a browser and see if we can login to our Auth0 client.
+In this step, we'll open a browser and see if we can log in to our Auth0 client.
 
 ### Instructions
 
@@ -341,7 +341,4 @@ In this step, we'll open a browser and see if we can login to our Auth0 client.
 
 ### Solution
 
-<b> insert giphy here </b>
-
-
-
+<img src="https://github.com/DevMountain/node-auth-mini/blob/solution/readme-assets/2g.gif" />
