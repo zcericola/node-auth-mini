@@ -51,12 +51,19 @@ In this step, we'll go to `manage.auth0.com` to create an account and modify the
 
 ### Summary
 
-In this step, we'll create a `strategy.js` file that will `require` the `auth0` strategy and we'll configure it to use our newly created `auth0` client.
+In this step, we'll create a `config.js` file and `strategy.js`. We'll add `config.js` to our `.gitignore` so we can keep the client `domain`, `id`, and `secret` off of GitHub. We'll then require it in `strategy.js` and configure `strategy.js` to use the `auth0` strategy.
 
 ### Instructions
 
+* Create a `config.js` file.
+* Open `config.js`.
+* Use `module.exports` to export an object.
+  * The object should have a `domain`, `clientID`, and `clientSecret` property that equal strings. 
+  * The strings should equal the values of your `domain`, `clientID`, and `clientSecret` from `manage.auth0.com`.
+* Add `config.js` to `.gitignore`.
 * Create a `strategy.js` file.
 * Open `strategy.js`.
+* Require `config.js`.
 * Require the `passport-auth0` strategy in a variable called `Auth0Strategy`.
 * Use `module.exports` to export a `new Auth0Strategy`.
   * <details>
@@ -80,7 +87,7 @@ In this step, we'll create a `strategy.js` file that will `require` the `auth0` 
     ```
     
     </details>
-* Modify the `domain`, `clientID`, and `clientSecret` to use yours from `manage.auth0.com`.
+* Modify the `domain`, `clientID`, and `clientSecret` to use the values from `config.js`.
 
 ### Solution
 
@@ -90,11 +97,13 @@ In this step, we'll create a `strategy.js` file that will `require` the `auth0` 
 
 ```js
 const Auth0Strategy = require('passport-auth0');
+const config = require(`${__dirname}/config.js`);
+const { domain, clientID, clientSecret } = config;
 
 module.exports = new Auth0Strategy({
-   domain:       'jameslemire.auth0.com',
-   clientID:     '4_8ZQzEOP6mYeoQbeAmscWFmjl-SjIVt',
-   clientSecret: '409I19zLLQfdsfgdfgvtQwlDwM=fraMC234bcdM07kntJE2f4D6PdZNfzRO23417A_1OfzcM7Owtla',
+   domain:       domain,
+   clientID:     clientID,
+   clientSecret: clientSecret,
    callbackURL:  '/login'
   },
   function(accessToken, refreshToken, extraParams, profile, done) {
