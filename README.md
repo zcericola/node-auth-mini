@@ -44,6 +44,8 @@ In this step, we'll go to `manage.auth0.com` to create an account and modify the
   * Change the `Token Endpoint Authentication Method` to `Basic`.
   * Change the `Allowed Callback URLs` to `http://localhost:3000/login`.
   * Change the `Allowed Origins` to `http://localhost:3000`
+  * Click `Show Advanced Settings` then select the `OAuth` tab.
+  * Unselect `OIDC Conformant` then, above the advanced settings unselect `Use Auth0 instead of the IdP to do Single Sign On`
 * Click `Save Changes`.
 * Keep the page open, we'll need the `domain`, `id`, and `secret` later.
 
